@@ -8,20 +8,20 @@ public class Application {
     public static void main(String[] args) {
 
         Kotik kitty = new Kotik(15, "Junior");
-        kitty.setKittySays("meow");
+        kitty.setTalk("meow");
         kitty.setSatiety(1);
 
         Kotik cat = new Kotik();
         cat.setName("Antonio");
         cat.setAge(5);
-        cat.setCatSays("meow");
+        cat.setTalk("meow");
         cat.setSatiety(5);
 
         System.out.println("Имя кота - " + kitty.getName());
 
         kitty.liveAnotherDay();
 
-        if (cat.getCatSays().equals(kitty.getKittySays())) {
+        if (cat.getTalk().equals(kitty.getTalk())) {
             System.out.println("Котики мяукают одинаково");
         } else {
             System.out.println("Котики мяукают по-разному");

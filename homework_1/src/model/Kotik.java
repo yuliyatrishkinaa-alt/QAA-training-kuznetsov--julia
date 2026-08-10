@@ -1,14 +1,12 @@
 package model;
 
 public class Kotik {
-    private int satiety;
-    private int hungery;
     private static int countExamps = 0;
+    private int satiety;
     private int id;
     private String name;
     private int age;
-    private String catSays;
-    private String kittySays;
+    private String talk;
 
     public Kotik() {
         countExamps++;
@@ -22,71 +20,41 @@ public class Kotik {
         int id = countExamps;
     }
 
-    public void play() {
+    private void action(String result, String result2) {
         if (satiety <= 0) {
-            String result = "Котик не хочет играть, он голодный";
             System.out.println(result);
-        } else if (satiety > 0) {
-            String result2 = "Котик играет";
+        } else {
             System.out.println(result2);
         }
     }
 
+    public void play() {
+        action("Котик не хочет играть, он голодный", "Котик играет");
+    }
+
     public void cheeseMouse() {
-        if (satiety <= 0) {
-            String result3 = "Котик не хочет догонять мышку, он голодный";
-            System.out.println(result3);
-        } else if (satiety > 0) {
-            String result4 = "Котик догоняет мышку";
-            System.out.println(result4);
-        }
+        action("Котик не хочет догонять мышку, он голодный", "Котик догоняет мышку");
     }
-
-    public void eat(int hungery) {
-        var myHungery = hungery + satiety;
-        if (myHungery <= 0) {
-            String result5 = "Котику нужно поесть";
-            System.out.println(result5);
-        } else if (myHungery > 0) {
-            String result6 = "Котик не голоден";
-            System.out.println(result6);
-        }
-    }
-
-    public void eat(int hungery, String foodName) {
-        hungery = hungery + satiety;
-        if (hungery <= 0) {
-            String result7 = "Котику нужно поесть";
-            System.out.println(result7 + foodName);
-        } else if (hungery > 0) {
-            String result8 = "Котик не хочет есть";
-            System.out.println(result8 + foodName);
-        }
-    }
-
-    public void eat() {
-        eat(0);
-    }
-
 
     public void sleep() {
-        if (satiety <= 0) {
-            String result9 = "Котик не может уснуть, он голодный";
-            System.out.println(result9);
-        } else if (satiety > 0) {
-            String result10 = "Котик уснул";
-            System.out.println(result10);
-        }
+        action("Котик не может уснуть, он голодный", "Котик уснул");
     }
 
     public void bite() {
-        if (satiety <= 0) {
-            String result11 = "Котик даже не кусается, он голодный";
-            System.out.println(result11);
-        } else if (satiety > 0) {
-            String result12 = "Котик кусается";
-            System.out.println(result12);
-        }
+        action("Котик даже не кусается, он голодный", "Котик кусается");
+    }
+
+    public void eat(int foodSatiety) {
+        eat(foodSatiety,"");
+    }
+
+    public void eat(int foodSatiety, String foodName) {
+        satiety = satiety + foodSatiety;
+        System.out.println("Котик съел " + foodName);
+    }
+
+    public void eat() {
+        eat(10, "food");
     }
 
     public void liveAnotherDay() {
@@ -122,11 +90,7 @@ public class Kotik {
         this.satiety = satiety;
     }
 
-    public int getHungery() {
-        return hungery;
-    }
-
-    public int getCountExamps() {
+    public static int getCountExamps() {
         return countExamps;
     }
 
@@ -146,21 +110,14 @@ public class Kotik {
         this.age = age;
     }
 
-    public void setCatSays(String catSays) {
-        this.catSays = catSays;
+    public void setTalk(String catSays) {
+        this.talk = catSays;
     }
 
-    public void setKittySays(String kittySays) {
-        this.kittySays = kittySays;
+    public String getTalk() {
+        return talk;
     }
 
-    public String getCatSays() {
-        return catSays;
-    }
-
-    public String getKittySays() {
-        return kittySays;
-    }
     public void setId(int id) {
         this.id = id;
     }
