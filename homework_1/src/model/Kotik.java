@@ -44,6 +44,10 @@ public class Kotik {
         action("Котик даже не кусается, он голодный", "Котик кусается");
     }
 
+    public void eat() {
+        eat(10, "food");
+    }
+
     public void eat(int foodSatiety) {
         eat(foodSatiety,"");
     }
@@ -51,10 +55,6 @@ public class Kotik {
     public void eat(int foodSatiety, String foodName) {
         satiety = satiety + foodSatiety;
         System.out.println("Котик съел " + foodName);
-    }
-
-    public void eat() {
-        eat(10, "food");
     }
 
     public void liveAnotherDay() {
