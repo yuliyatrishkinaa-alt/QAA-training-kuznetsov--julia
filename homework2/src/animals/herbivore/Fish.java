@@ -14,8 +14,4 @@ public class Fish extends Herbivore implements Swimable {
         System.out.println("Fish's swimming");
     }
 
-    @Override
-    public String eat(Food food) {
-        return food;
-    }
 }

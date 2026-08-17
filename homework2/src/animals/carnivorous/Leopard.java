@@ -15,11 +15,7 @@ public class Leopard extends Carnivorous implements Runable, Voicable {
 
     @Override
     public String voice() {
-        return "Rrrooou";
-    }
-
-    @Override
-    public String eat(String food) {
-        return food;
+        String voice = "Roarr";
+        return voice;
     }
 }

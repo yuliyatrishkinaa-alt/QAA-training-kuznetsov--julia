@@ -2,7 +2,7 @@ package food;
 
 public class Meat extends Food {
 
-    public Meat (Food food) {
+    public Meat (String food) {
         super(food);
     }
 

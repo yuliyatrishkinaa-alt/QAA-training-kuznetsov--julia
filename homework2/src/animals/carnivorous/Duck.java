@@ -2,23 +2,21 @@ package animals.carnivorous;
 
 import animals.interfaces.Runable;
 import animals.interfaces.Voicable;
-import food.Food;
-import food.Meat;
 
-public class Tiger extends Carnivorous implements Runable, Voicable {
+public class Duck extends Carnivorous implements Runable, Voicable {
 
-    public Tiger(String name, int age) {
+    public Duck (String name, int age) {
         super(name, age);
     }
 
     @Override
     public void run() {
-        System.out.println("Tiger's running");
+        System.out.println("Duck's running");
     }
 
     @Override
     public String voice() {
-        String voice = "Ruuuuah";
+        String voice = "Kruaa";
         return voice;
     }
 }

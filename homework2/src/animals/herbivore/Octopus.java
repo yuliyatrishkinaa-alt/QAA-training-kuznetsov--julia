@@ -12,7 +12,4 @@ public class Octopus extends Herbivore implements Swimable {
     public void swim() {
         System.out.println("Octopus swimming");
     }
-    @Override
-    public String eat(Food food) {
-    }
 }

@@ -3,6 +3,8 @@ package animals.herbivore;
 import animals.interfaces.Runable;
 import animals.interfaces.Voicable;
 
+import java.sql.SQLOutput;
+
 public class Monkey extends Herbivore implements Runable, Voicable {
 
     public Monkey(String name, int age) {
@@ -16,10 +18,8 @@ public class Monkey extends Herbivore implements Runable, Voicable {
 
     @Override
     public String voice() {
-        return "U-a-a-u";
+        String voice = "U-a-a";
+        return voice;
     }
 
-    @Override
-    public String eat(String food) {
-    }
 }

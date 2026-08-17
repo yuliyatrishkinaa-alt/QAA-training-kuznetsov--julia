@@ -13,9 +13,4 @@ public class Crocodile extends Carnivorous implements Swimable {
     public void swim() {
         System.out.println("Croco's swimming");
     }
-
-    @Override
-    public String eat(Food food) {
-    return food;
-    }
 }

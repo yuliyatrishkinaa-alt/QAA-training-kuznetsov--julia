@@ -2,14 +2,24 @@ package food;
 
 public abstract class Food {
 
-    protected String food;
-    protected int foodSatiety;
+    private String food;
+    private int foodSatiety;
 
     public Food(String food) {
         this.food = food;
     }
 
-    public FoodSatiety(int foodSatiety) {
+    @Override
+    public String toString() {
+        return "Food{" +
+                "food - " + food +
+                '}';
+    }
+    public void setFoodSatiety(int foodSatiety){
         this.foodSatiety = foodSatiety;
+    }
+
+    public int getFoodSatiety(){
+        return foodSatiety;
     }
 }
