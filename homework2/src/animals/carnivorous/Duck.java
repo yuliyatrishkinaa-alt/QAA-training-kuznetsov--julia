@@ -5,21 +5,20 @@ import animals.interfaces.Runable;
 import animals.interfaces.Swimable;
 import animals.interfaces.Voicable;
 
-public class Duck extends Carnivorous implements Runable, Voicable, Swimable, Flyable {
+public class Duck extends Carnivorous implements Runable, Swimable, Flyable, Voicable {
 
     public Duck (String name, int age) {
         super(name, age);
     }
 
-    @Override
-    public void run() {
-        System.out.println("Duck's running");
+    public String getVoice() {
+        String voice = "Krua";
+        return voice;
     }
 
     @Override
-    public String voice() {
-        String voice = "Kruaa";
-        return voice;
+    public void run() {
+        System.out.println("Duck's running");
     }
 
     @Override

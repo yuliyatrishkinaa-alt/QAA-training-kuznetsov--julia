@@ -1,7 +1,6 @@
 package worker;
 
 import animals.Animals;
-import animals.interfaces.Voicable;
 import food.Food;
 
 public class Worker {

@@ -2,5 +2,5 @@ package animals.interfaces;
 
 public interface Runable {
 
-    void run();
+    public void run();
 }

@@ -17,15 +17,14 @@ public abstract class Animals {
         this.age = age;
     }
 
-    public String getVoice() {
-        return voice;
-    }
-
     @Override
     public String toString() {
         return "Animals{" +
                 "name - " + name +
                 '}';
+    }
+    public String getVoice() {
+        return voice;
     }
 
     public void setSatiety(int satiety){
