@@ -20,6 +20,6 @@ public class Worker {
     }
 
     public void getVoice(Animals animal) {
-        System.out.println(animal + " says " + animal.voice());
+        System.out.println(animal + " says " + animal.getVoice());
     }
 }

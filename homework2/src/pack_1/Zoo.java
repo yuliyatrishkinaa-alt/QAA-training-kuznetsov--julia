@@ -18,8 +18,8 @@ public class Zoo {
     public static void main(String[] args) {
 
         Crocodile crocodile = new Crocodile("Misha", 15);
-        Grass bananas = new Grass("LittleGrass");
-        Grass klewer = new Grass("LongGrass");
+        Grass bananas = new Grass("bananas");
+        Grass klewer = new Grass("klewer");
         Meat chicken = new Meat("chicken");
         Fish littleFish = new Fish("littleFish", 1);
         Fish bigFish = new Fish("bigFish", 2);
@@ -28,7 +28,7 @@ public class Zoo {
         Octopus middleOcto = new Octopus("middleOctopus", 2);
         Worker natan = new Worker("Natan", "Nanidze");
         Monkey zemfira = new Monkey("Zemfira", 15);
-        Leopard leo = new Leopard("Gosha", 21);
+        Leopard leo = new Leopard("Leo", 21);
         Tiger ryk = new Tiger("Ryk", 11);
         Duck ronald = new Duck("Ronald", 2);
         ronald.setSatiety(3);
@@ -36,7 +36,8 @@ public class Zoo {
         chicken.setFoodSatiety(10);
         klewer.setFoodSatiety(2);
 
-        ronald.fullSatiety(chicken);
+        ronald.eat(chicken);
+        zemfira.eat(klewer);
 
         ArrayList<Swimable> lakeAnimals = new ArrayList<>();
         lakeAnimals.add(littleFish);
@@ -65,6 +66,8 @@ public class Zoo {
         ronald.run();
         zemfira.run();
         littleOcto.swim();
-        leo.run(); }
+        leo.run();
+        crocodile.swim();
 
+    }
 }

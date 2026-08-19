@@ -17,16 +17,8 @@ public abstract class Animals {
         this.age = age;
     }
 
-    public String voice() {
+    public String getVoice() {
         return voice;
-    }
-
-    public void eat(Food food){
-        if (food instanceof Grass) {
-            System.out.println("Animal's eating");
-        } else {
-            System.out.println("The food is wrong for this animal");
-        }
     }
 
     @Override
@@ -43,8 +35,5 @@ public abstract class Animals {
     public int getSatiety(){
         return satiety;
     }
-    public void fullSatiety(Food food){
-        int fullSatiety = this.satiety + food.getFoodSatiety();
-        System.out.println(fullSatiety);
-    }
+    public void eat(Food food){}
 }

@@ -11,4 +11,12 @@ public abstract class Herbivore extends Animals {
         super(name, age);
     }
 
+    public void eat(Food food){
+        int fullSatiety = getSatiety() + food.getFoodSatiety();
+        if (food instanceof Grass) {
+            System.out.println("Animal's eating" + ", " + "satiety = " + fullSatiety);
+        } else {
+            System.out.println("The food is wrong for this animal");
+        }
+    }
 }
