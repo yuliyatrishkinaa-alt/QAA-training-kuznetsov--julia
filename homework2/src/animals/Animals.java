@@ -9,8 +9,8 @@ public abstract class Animals {
 
     private String name;
     private int age;
-    private int satiety;
-    private String voice;
+    protected int satiety;
+    protected String voice;
 
     public Animals (String name, int age){
         this.name = name;
@@ -22,9 +22,6 @@ public abstract class Animals {
         return "Animals{" +
                 "name - " + name +
                 '}';
-    }
-    public String getVoice() {
-        return voice;
     }
 
     public void setSatiety(int satiety){

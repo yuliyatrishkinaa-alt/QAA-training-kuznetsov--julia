@@ -11,9 +11,9 @@ public abstract class Carnivorous extends Animals {
     }
 
     public void eat(Food food){
-        int fullSatiety = getSatiety() + food.getFoodSatiety();
+        satiety += food.getFoodSatiety();
         if (food instanceof Meat) {
-            System.out.println("Animal's eating" + ", " + "satiety = " + fullSatiety);
+            System.out.println("Animal's eating" + ", " + "satiety = " + satiety);
         } else {
             System.out.println("The food is wrong for this animal");
         }

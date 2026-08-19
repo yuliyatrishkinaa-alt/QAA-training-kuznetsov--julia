@@ -9,9 +9,8 @@ public class Monkey extends Herbivore implements Runable, Voicable {
         super(name, age);
     }
 
-    public String getVoice() {
-        String voice = "U-a-a";
-        return voice;
+    public void getVoice() {
+        System.out.println("U-a-a");
     }
 
     @Override

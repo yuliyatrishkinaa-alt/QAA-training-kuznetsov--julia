@@ -9,9 +9,8 @@ public class Tiger extends Carnivorous implements Runable, Voicable {
         super(name, age);
     }
 
-    public String getVoice() {
-        String voice = "Ruuah";
-        return voice;
+    public void getVoice() {
+        System.out.println("Ruuah");
     }
 
         @Override

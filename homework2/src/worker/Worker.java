@@ -1,6 +1,7 @@
 package worker;
 
 import animals.Animals;
+import animals.interfaces.Voicable;
 import food.Food;
 
 public class Worker {
@@ -18,7 +19,8 @@ public class Worker {
         animal.eat(food);
     }
 
-    public void getVoice(Animals animal) {
-        System.out.println(animal + " says " + animal.getVoice());
+    public void getVoice(Voicable animal) {
+        System.out.println(animal + " says ");
+        animal.getVoice();
     }
 }

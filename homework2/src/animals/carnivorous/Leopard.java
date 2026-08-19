@@ -10,9 +10,8 @@ public class Leopard extends Carnivorous implements Runable, Swimable, Voicable 
         super(name, age);
     }
 
-    public String getVoice() {
-        String voice = "Roar";
-        return voice;
+    public void getVoice() {
+        System.out.println("Roar");
     }
 
     @Override

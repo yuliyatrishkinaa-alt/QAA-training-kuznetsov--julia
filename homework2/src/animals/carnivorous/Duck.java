@@ -11,9 +11,8 @@ public class Duck extends Carnivorous implements Runable, Swimable, Flyable, Voi
         super(name, age);
     }
 
-    public String getVoice() {
-        String voice = "Krua";
-        return voice;
+    public void getVoice() {
+        System.out.println("Krua");
     }
 
     @Override

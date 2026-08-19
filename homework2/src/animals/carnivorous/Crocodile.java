@@ -9,9 +9,8 @@ public class Crocodile extends Carnivorous implements Swimable, Runnable, Voicab
         super(name, age);
     }
 
-    public String getVoice() {
-        String voice = "R-r-r-r";
-        return voice;
+    public void getVoice() {
+        System.out.println("R-r-r-r");
     }
 
     @Override

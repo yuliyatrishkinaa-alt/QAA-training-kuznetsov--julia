@@ -37,6 +37,7 @@ public class Zoo {
         klewer.setFoodSatiety(2);
 
         ronald.eat(chicken);
+        ronald.eat(chicken);
         zemfira.eat(klewer);
 
         ArrayList<Swimable> lakeAnimals = new ArrayList<>();
